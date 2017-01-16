@@ -39,6 +39,9 @@ public class ForecastListAdapter extends RecyclerView.Adapter<ForecastListAdapte
         holder.dayTime.setText(Util.getDayTime(forecastList.get(position).getHour()));
         holder.temperature.setText(forecastList.get(position).getTemperature().getMin().concat(context.getString(R.string.slash))
         .concat(forecastList.get(position).getTemperature().getMax()));
+        holder.weatherIcon.setImageResource(Util.getIcon36(forecastList.get(position).getHour(),
+                forecastList.get(position).getPhenomena().getCloudiness(),
+                forecastList.get(position).getPhenomena().getPrecipitation()));
     }
 
     @Override

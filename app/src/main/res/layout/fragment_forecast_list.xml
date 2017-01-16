@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height"
+        android:background="@color/color_material_blue_grey_50">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_forecasts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_material_blue_grey_50">
+
+        <Button
+            android:text="@string/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_update"
+            style="@android:style/Widget.Material.Button.Borderless.Colored"
+            android:textColorLink="@android:color/holo_orange_light"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_update_margin"
+            tools:targetApi="lollipop" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height"
+    android:background="@color/color_material_blue_grey_50">
+
+    <TextView
+        android:id="@+id/tv_day_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/item_margin"
+        android:layout_marginStart="@dimen/item_margin" />
+
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/item_margin"
+        android:layout_marginRight="@dimen/item_margin" />
+
+    <ImageView
+        android:id="@+id/iv_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/image_margin"
+        android:layout_marginRight="@dimen/image_margin"
+        android:layout_toLeftOf="@+id/tv_temperature"
+        android:layout_toStartOf="@+id/tv_temperature"
+        app:srcCompat="@drawable/ic_weather_partlycloudy_36" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp" />
+</RelativeLayout>

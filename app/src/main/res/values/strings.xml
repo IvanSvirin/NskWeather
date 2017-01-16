@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NskWeather</string>
+    <string name="no_data">Нет данных</string>
+    <string name="update">Обновить</string>
+    <string name="slash">" / "</string>
+
+</resources>

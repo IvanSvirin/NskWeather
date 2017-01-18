@@ -2,18 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/item_height"
-    android:background="@color/color_material_blue_grey_50">
+    android:background="@color/color_material_blue_grey_50"
+    android:layout_height="50dp">
 
     <TextView
-        android:id="@+id/tv_day_time"
+        android:id="@+id/tv_date_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/item_margin"
-        android:layout_marginStart="@dimen/item_margin" />
+        android:layout_marginStart="@dimen/item_margin"
+        android:textColor="?android:attr/editTextColor" />
 
     <TextView
         android:id="@+id/tv_temperature"
@@ -23,18 +24,19 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/item_margin"
-        android:layout_marginRight="@dimen/item_margin" />
+        android:layout_marginRight="@dimen/item_margin"
+        android:textColor="?android:attr/editTextColor" />
 
     <ImageView
         android:id="@+id/iv_weather_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_icon_size"
+        android:layout_height="@dimen/list_icon_size"
         android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/image_margin"
         android:layout_marginRight="@dimen/image_margin"
         android:layout_toLeftOf="@+id/tv_temperature"
         android:layout_toStartOf="@+id/tv_temperature"
-        app:srcCompat="@drawable/ic_weather_partlycloudy_36" />
+        app:srcCompat="@drawable/partly_cloudy" />
 
     <View
         android:layout_width="match_parent"
@@ -43,4 +45,15 @@
         android:layout_alignParentStart="true"
         android:background="@android:color/darker_gray"
         android:layout_height="1dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_date_small"
+        android:layout_toEndOf="@+id/tv_date_small"
+        android:layout_marginLeft="@dimen/margin_day_time"
+        android:layout_marginStart="@dimen/margin_day_time"
+        android:id="@+id/tv_day_time"
+        android:textColor="?android:attr/editTextColor" />
 </RelativeLayout>

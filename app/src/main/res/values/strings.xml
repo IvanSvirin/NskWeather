@@ -1,7 +1,29 @@
 <resources>
-    <string name="app_name">NskWeather</string>
+    <string name="app_name">Погода в Новосибирске</string>
     <string name="no_data">Нет данных</string>
     <string name="update">Обновить</string>
     <string name="slash">" / "</string>
+    <string name="precipitation">ОСАДКИ</string>
+    <string name="wind">ВЕТЕР</string>
+    <string name="rain">Дождь</string>
+    <string name="direction">Направление</string>
+    <string name="speed">Скорость</string>
+    <string name="snow">Снег</string>
+    <string name="pressure">ДАВЛЕНИЕ</string>
+    <string name="wetness">ВЛАЖНОСТЬ</string>
+    <string name="real_feel">"По ощущению "</string>
+    <string name="space">" "</string>
+    <string name="speed_unit">" м/с"</string>
+    <string name="pressure_unit">" мм рт ст"</string>
+    <string name="percent">" %"</string>
+    <string-array name="week_day">
+        <item>СУББОТА</item>
+        <item>ВОСКРЕСЕНЬЕ</item>
+        <item>ПОНЕДЕЛЬНИК</item>
+        <item>ВТОРНИК</item>
+        <item>СРЕДА</item>
+        <item>ЧЕТВЕРГ</item>
+        <item>ПЯТНИЦА</item>
+    </string-array>
 
 </resources>

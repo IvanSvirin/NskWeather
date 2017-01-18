@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relative_layout_height"
+        android:background="@android:color/background_light"
+        android:padding="@dimen/small_padding">
+
+        <TextView
+            android:id="@+id/tv_day_quarter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_date"
+            android:layout_alignStart="@+id/tv_date"
+            android:layout_below="@+id/tv_date"
+            android:text="ДЕНЬ"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_temperature_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="16"
+            android:textColor="?android:attr/editTextColor"
+            android:textSize="@dimen/large_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/details_icon_size"
+            android:layout_height="@dimen/details_icon_size"
+            android:layout_alignBottom="@+id/tv_temperature_degree"
+            android:layout_toLeftOf="@+id/tv_temperature_degree"
+            android:layout_toStartOf="@+id/tv_temperature_degree"
+            app:srcCompat="@drawable/partly_cloudy" />
+
+        <TextView
+            android:id="@+id/tv_precipitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textColor="?attr/editTextColor" />
+
+        <TextView
+            android:id="@+id/tv_real_feel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_precipitation"
+            android:layout_alignStart="@+id/tv_precipitation"
+            android:layout_below="@+id/tv_temperature_degree"
+            android:text="TextView"
+            android:textColor="?android:attr/editTextColor" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tv_temperature_degree"
+            android:layout_toStartOf="@+id/tv_temperature_degree"
+            android:text="17/01 ВТОРНИК"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:padding="@dimen/standard_padding">
+
+            <TextView
+                android:id="@+id/tv_wind_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/small_padding"
+                android:text="@string/wind"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_direction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_wind_title"
+                android:padding="@dimen/small_padding"
+                android:text="@string/direction"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_speed_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_direction_title"
+                android:padding="@dimen/small_padding"
+                android:text="@string/speed"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_pressure_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_speed_title"
+                android:padding="@dimen/small_padding"
+                android:text="@string/pressure"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_wetness_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_pressure_title"
+                android:padding="@dimen/small_padding"
+                android:text="@string/wetness"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_direction_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_direction_title"
+                android:layout_alignBottom="@+id/tv_direction_title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/small_padding"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_direction_value"
+                android:padding="@dimen/small_padding"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_pressure_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_speed_value"
+                android:padding="@dimen/small_padding"
+                android:textColor="?android:attr/editTextColor" />
+
+            <TextView
+                android:id="@+id/tv_wetness_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_pressure_value"
+                android:padding="@dimen/small_padding"
+                android:textColor="?android:attr/editTextColor" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

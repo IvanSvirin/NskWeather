@@ -36,10 +36,12 @@ public class ForecastListAdapter extends RecyclerView.Adapter<ForecastListAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.dayTime.setText(Util.getDayTime(forecastList.get(position).getHour()));
+        holder.dateSmall.setText(forecastList.get(position).getDay().concat(context.getString(R.string.slash))
+                .concat(forecastList.get(position).getMonth()));
+        holder.dayTime.setText(Util.getDayTime(forecastList.get(position).getTod()));
         holder.temperature.setText(forecastList.get(position).getTemperature().getMin().concat(context.getString(R.string.slash))
         .concat(forecastList.get(position).getTemperature().getMax()));
-        holder.weatherIcon.setImageResource(Util.getIcon36(forecastList.get(position).getHour(),
+        holder.weatherIcon.setImageResource(Util.getIcon(forecastList.get(position).getTod(),
                 forecastList.get(position).getPhenomena().getCloudiness(),
                 forecastList.get(position).getPhenomena().getPrecipitation()));
     }
@@ -59,6 +61,8 @@ public class ForecastListAdapter extends RecyclerView.Adapter<ForecastListAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.tv_date_small)
+        TextView dateSmall;
         @BindView(R.id.tv_day_time)
         TextView dayTime;
         @BindView(R.id.tv_temperature)

@@ -33,6 +33,7 @@ public class ForecastListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         forecastListAdapter = new ForecastListAdapter(getContext(), new ArrayList<>());
+        setRetainInstance(true);
     }
 
     @Override
@@ -47,7 +48,9 @@ public class ForecastListFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getData();
+        if (savedInstanceState == null) {
+            getData();
+        }
     }
 
     public void getData() {

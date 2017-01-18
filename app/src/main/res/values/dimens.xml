@@ -6,6 +6,13 @@
     <dimen name="item_margin">16dp</dimen>
     <dimen name="image_margin">60dp</dimen>
     <dimen name="item_height">60dp</dimen>
-    <dimen name="list_height">240dp</dimen>
+    <dimen name="list_height">200dp</dimen>
     <dimen name="btn_update_margin">12dp</dimen>
+    <dimen name="large_text_size">46sp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="standard_padding">16dp</dimen>
+    <dimen name="details_icon_size">48dp</dimen>
+    <dimen name="list_icon_size">36dp</dimen>
+    <dimen name="relative_layout_height">150dp</dimen>
+    <dimen name="margin_day_time">40dp</dimen>
 </resources>

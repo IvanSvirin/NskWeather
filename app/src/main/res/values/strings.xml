@@ -16,6 +16,8 @@
     <string name="speed_unit">" м/с"</string>
     <string name="pressure_unit">" мм рт ст"</string>
     <string name="percent">" %"</string>
+    <string name="no_internet">Нет соединения с интернетом</string>
+    <string name="error_message">Unable to resolve host \"informer.gismeteo.ru\": No address associated with hostname</string>
     <string-array name="week_day">
         <item>СУББОТА</item>
         <item>ВОСКРЕСЕНЬЕ</item>

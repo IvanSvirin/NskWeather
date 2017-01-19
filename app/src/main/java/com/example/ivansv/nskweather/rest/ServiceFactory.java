@@ -7,10 +7,10 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
-public class ServiceFactory {
-    public static final String API_BASE_URL = "http://informer.gismeteo.ru/xml/";
+class ServiceFactory {
+    private static final String API_BASE_URL = "http://informer.gismeteo.ru/xml/";
 
-    public static <S> S createRetrofitService(Class<S> serviceClass) {
+    static <S> S createRetrofitService(Class<S> serviceClass) {
         Retrofit.Builder builder =
                 new Retrofit.Builder()
                         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.ivansv.nskweather.R;
 import com.example.ivansv.nskweather.model.Forecast;
 import com.example.ivansv.nskweather.rest.DataProvider;
+import com.example.ivansv.nskweather.util.Util;
 import com.example.ivansv.nskweather.view.adapter.ForecastListAdapter;
 
 import java.util.ArrayList;
@@ -63,6 +64,10 @@ public class ForecastListFragment extends Fragment {
                     @Override
                     public void onError(Throwable e) {
                         e.printStackTrace();
+                        String message = e.getMessage();
+                        if (message.equals(getString(R.string.error_message))) {
+                            Util.showFailNotification(getString(R.string.no_internet), getContext());
+                        }
                     }
 
                     @Override

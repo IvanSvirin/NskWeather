@@ -19,9 +19,6 @@ public class DataProvider {
     public static Observable<List<Forecast>> getForecastsFromApiObservable() {
         return getWeather()
                 .flatMap(weather -> {
-                    if (weather == null) {
-                        return Observable.error(new Error());
-                    }
                     return Observable.just(weather.getReport().getTown().getForecastList());
                 })
                 .subscribeOn(Schedulers.io())

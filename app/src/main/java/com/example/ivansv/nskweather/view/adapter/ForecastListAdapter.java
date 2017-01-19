@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ivansv.nskweather.R;
-import com.example.ivansv.nskweather.Util;
+import com.example.ivansv.nskweather.util.Util;
 import com.example.ivansv.nskweather.model.Forecast;
 import com.example.ivansv.nskweather.view.activity.DetailsActivity;
 
@@ -43,7 +43,7 @@ public class ForecastListAdapter extends RecyclerView.Adapter<ForecastListAdapte
         .concat(forecastList.get(position).getTemperature().getMax()));
         holder.weatherIcon.setImageResource(Util.getIcon(forecastList.get(position).getTod(),
                 forecastList.get(position).getPhenomena().getCloudiness(),
-                forecastList.get(position).getPhenomena().getPrecipitation()));
+                forecastList.get(position).getPhenomena().getPrecipitation(), forecastList.get(position).getPhenomena().getSpower()));
     }
 
     @Override
@@ -70,7 +70,7 @@ public class ForecastListAdapter extends RecyclerView.Adapter<ForecastListAdapte
         @BindView(R.id.iv_weather_icon)
         ImageView weatherIcon;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
 

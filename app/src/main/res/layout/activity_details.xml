@@ -18,7 +18,6 @@
             android:layout_alignLeft="@+id/tv_date"
             android:layout_alignStart="@+id/tv_date"
             android:layout_below="@+id/tv_date"
-            android:text="ДЕНЬ"
             android:textColor="@color/colorPrimary" />
 
         <TextView
@@ -27,18 +26,17 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="16"
             android:textColor="?android:attr/editTextColor"
             android:textSize="@dimen/large_text_size" />
 
         <ImageView
             android:id="@+id/iv_icon"
-            android:layout_width="@dimen/details_icon_size"
-            android:layout_height="@dimen/details_icon_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/tv_temperature_degree"
             android:layout_toLeftOf="@+id/tv_temperature_degree"
             android:layout_toStartOf="@+id/tv_temperature_degree"
-            app:srcCompat="@drawable/partly_cloudy" />
+            app:srcCompat="@drawable/partly_cloudy_big" />
 
         <TextView
             android:id="@+id/tv_precipitation"
@@ -46,7 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="TextView"
             android:textColor="?attr/editTextColor" />
 
         <TextView
@@ -56,7 +53,6 @@
             android:layout_alignLeft="@+id/tv_precipitation"
             android:layout_alignStart="@+id/tv_precipitation"
             android:layout_below="@+id/tv_temperature_degree"
-            android:text="TextView"
             android:textColor="?android:attr/editTextColor" />
 
         <TextView
@@ -66,7 +62,6 @@
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/tv_temperature_degree"
             android:layout_toStartOf="@+id/tv_temperature_degree"
-            android:text="17/01 ВТОРНИК"
             android:textColor="@color/colorPrimary" />
     </RelativeLayout>
 

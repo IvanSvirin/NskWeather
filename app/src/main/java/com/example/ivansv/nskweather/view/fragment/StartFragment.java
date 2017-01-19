@@ -26,7 +26,6 @@ public class StartFragment extends Fragment {
     void showForecastList() {
         getFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new ForecastListFragment())
-//                .addToBackStack(null)
                 .commit();
     }
 }

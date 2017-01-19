@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ivansv.nskweather.R;
-import com.example.ivansv.nskweather.Util;
+import com.example.ivansv.nskweather.util.Util;
 import com.example.ivansv.nskweather.model.Forecast;
 
 import butterknife.BindView;
@@ -51,8 +51,8 @@ public class DetailsActivity extends AppCompatActivity {
         dayQuarter.setText(Util.getDayTime(forecast.getTod()).toUpperCase());
         temperatureDegree.setText(Util.getAverage(forecast.getTemperature().getMin(), forecast.getTemperature().getMax())
                 .concat(String.valueOf(degree)));
-        icon.setImageResource(Util.getIcon(forecast.getTod(), forecast.getPhenomena().getCloudiness(),
-                forecast.getPhenomena().getPrecipitation()));
+        icon.setImageResource(Util.getIconBig(forecast.getTod(), forecast.getPhenomena().getCloudiness(),
+                forecast.getPhenomena().getPrecipitation(), forecast.getPhenomena().getSpower()));
         precipitation.setText(Util.getPhenomena(forecast.getPhenomena().getCloudiness(), forecast.getPhenomena().getPrecipitation()));
         realFeel.setText(getString(R.string.real_feel).concat(Util.getAverage(forecast.getHeat().getMin(), forecast.getHeat().getMax()))
         .concat(String.valueOf(degree)));

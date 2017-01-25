@@ -1,9 +1,5 @@
 package com.example.ivansv.nskweather.util;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
-
 import com.example.ivansv.nskweather.R;
 
 public class Util {
@@ -176,19 +172,5 @@ public class Util {
             }
         }
         return R.drawable.clear_day_big;
-    }
-
-    public static void showFailNotification(String message, Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setMessage(message)
-                .setTitle("Failure")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        builder.create().show();
     }
 }

@@ -18,6 +18,9 @@
     <string name="percent">" %"</string>
     <string name="no_internet">Нет соединения с интернетом</string>
     <string name="error_message">Unable to resolve host \"informer.gismeteo.ru\": No address associated with hostname</string>
+    <string name="exception_message_generic">There was an application error</string>
+    <string name="exception_message_no_connection">There is no internet connection</string>
+    <string name="exception_message_forecast_not_found">Cannot retrieve forecast data. Check your internet connection</string>
     <string-array name="week_day">
         <item>СУББОТА</item>
         <item>ВОСКРЕСЕНЬЕ</item>

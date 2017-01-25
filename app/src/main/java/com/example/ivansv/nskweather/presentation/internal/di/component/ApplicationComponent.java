@@ -23,6 +23,4 @@ public interface ApplicationComponent {
     ThreadExecutor threadExecutor();
     PostExecutionThread postExecutionThread();
     ForecastRepository forecastRepository();
-//    Retrofit retrofit();
-//    WeatherService weatherService();
 }
